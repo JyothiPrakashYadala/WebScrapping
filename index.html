@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HeadLines</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Headlines</h1>
+    <div class="container">
+        <div class="news">
+            <h2>BBC Headlines</h2>
+            <ul>
+                {% for headline in data.BBC_HeadLines %}
+                    <li>{{ headline }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="news">
+            <h2>CNN Headlines</h2>
+            <ul>
+                {% for headline in data.CNN_HeadLines %}
+                    <li>{{ headline }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
